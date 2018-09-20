@@ -85,10 +85,19 @@ public class MethodsExercises {
     static Scanner scan = new Scanner(System.in).useDelimiter("\n");
 
     public static void main(String[] args) {
-       int a = 5;
-       int b = -10;
-       int result = multiplyWithoutOperator(a, b);
-        System.out.println(result);
+        System.out.println(factorial(5));
+    }
+
+    public static long factorial(int a) {
+        long factorial = 1;
+
+        while(a > 1) {
+            factorial *= a;
+            a--;
+        }
+
+        return factorial;
+
     }
 
     public static int getInt() {
