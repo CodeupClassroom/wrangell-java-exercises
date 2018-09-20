@@ -97,7 +97,6 @@ public class MethodsExercises {
         }
 
         return factorial;
-
     }
 
     public static int getInt() {
