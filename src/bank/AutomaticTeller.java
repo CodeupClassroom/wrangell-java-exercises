@@ -28,7 +28,9 @@ public class AutomaticTeller {
         System.out.println(anotherCustomer.getNumberOfCustomers());
 
 
-        Customer.getName();
+        System.out.println(newCustomer.defaultAccount.owner.getName());
+
+
     }
 
 
