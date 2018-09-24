@@ -1,22 +1,35 @@
+import com.codeup.wrangell.daniel.TicTacToe;
+import java.util.Scanner;
+
+
 public class Sandbox {
 
-    public static String modifyString(String param) {
-        param = "HAHAHAHAH";
-        return param;
-    }
-
-    public static void addTwo(int num) {
-        num = num + 2;
-    }
     public static void main(String[] args) {
-        String name = "codeup";
-        System.out.println(name);
-        name = modifyString(name);
-        System.out.println(name);
-        int seven = 7;
-        System.out.println(seven);
-        addTwo(seven);
-        System.out.println(seven);
+
+//        String[] words = new String[7];
+//        words[0] = "Hello";
+//        words[1] = "Bonjour";
+//        words[2] = "Hola";
+//        words[3] = "Aloha";
+//        for (String word:words) {
+//            System.out.println(word);
+//        }
+//
+
+        TicTacToe game = new TicTacToe();
+//        game.takeTurn(1,1);
+//        game.takeTurn(2,2);
+//        game.takeTurn(1,2);
+//        game.takeTurn(1,0);
+//        game.takeTurn(2,0);
+//        game.takeTurn(0,2);
+//        game.takeTurn(0,1);
+//        game.takeTurn(2,1);
+//        game.takeTurn(0,0);
+
+        while (true) {
+            game.takeTurn();
+        }
     }
 }
 
