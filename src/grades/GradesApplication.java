@@ -15,7 +15,9 @@ public class GradesApplication {
         students.put("james.kevin.a.young", james);
 
         students.put("githubmonster", new Student("student1"));
-        
+        students.get("githubmonster").addGrade(91);
+
+        students.put("MaxPower", new Student("Max"));
     }
 
 }
