@@ -1,16 +1,34 @@
-import com.codeup.wrangell.daniel.TicTacToe;
-import instruments.*;
-import shapes.Rectangle;
+package yadayada;
+
+import this;
+import that;
 
 public class Sandbox {
+    //static properties
+    static int UNIVERSAL_HEIGHT = 100;
+    //instance properties
+    int height;
+    int width;
+    //constructors
+    public Sandbox() {
+       this.height = UNIVERSAL_HEIGHT;
 
-    public static void main(String[] args) {
-        Rectangle rect = new Rectangle(5,6);
-        System.out.println(rect.getArea());
-        System.out.println(rect.getPerimeter());
-
-        Instrument violin = new Violin("Stradivarios");
     }
+    //static methods
+    static void method1(){
+
+    }
+    static void method2(){
+
+    }
+    //instance methods
+
+    //main method last
+    public static void main(String[] args) {
+
+    }
+
+
 }
 
 
