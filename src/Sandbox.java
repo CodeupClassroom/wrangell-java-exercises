@@ -1,4 +1,5 @@
 import com.codeup.wrangell.daniel.TicTacToe;
+import instruments.*;
 import shapes.Rectangle;
 
 public class Sandbox {
@@ -8,6 +9,7 @@ public class Sandbox {
         System.out.println(rect.getArea());
         System.out.println(rect.getPerimeter());
 
+        Instrument violin = new Violin("Stradivarios");
     }
 }
 
