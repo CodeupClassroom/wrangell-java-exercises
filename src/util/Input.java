@@ -1,7 +1,9 @@
 package util;
 
 import java.util.Scanner;
+//import org.apache.commons.math3.exception.OutOfRangeException;
 
+class OutOfRangeException extends Exception {}
 /**
  * String getString()
  * boolean yesNo()
@@ -30,16 +32,45 @@ public class Input {
     }
 
     public int getInt() {
-        return scan.nextInt();
+        System.out.println("Please input an integer");
+        int input;
+        try {
+            input = Integer.valueOf(getString());
+        } catch (NumberFormatException e) {
+            System.out.println("Input is not a valid integer");
+            input = getInt();
+        }
+        return input;
     }
 
     public int getInt(int min, int max) {
         System.out.println("Please input an integer between " + min + " and " + max);
-        return getInt();
+        int input;
+        try {
+            input = Integer.valueOf(getString());
+            if (input < min || input > max)
+                throw new OutOfRangeException();
+//            throw new OutOfRangeException(input, min, max);
+        } catch (NumberFormatException e) {
+            System.out.println("Input is not a valid integer");
+            input = getInt(min,max);
+        } catch (OutOfRangeException e) {
+            System.out.println("Input is not in range");
+            input = getInt(min,max);
+        }
+        return input;
     }
 
     public double getDouble() {
-        return scan.nextDouble();
+        System.out.println("Please input a double precision number");
+        double input;
+        try {
+            input = Double.valueOf(getString());
+        } catch (NumberFormatException e) {
+            System.out.println("That's not a number");
+            input = getDouble();
+        }
+        return input;
     }
 
     public double getDouble(double min, double max) {

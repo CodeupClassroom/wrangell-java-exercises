@@ -19,11 +19,18 @@ public class Student {
     public void addGrade(int grade){
         this.grades.add(grade);
     }
-    // returns the average of the students grades
+    // returns the average of the records grades
+    @Deprecated
     public double getGradeAverage(){
         double gradesTotal = 0;
         for (int grade:this.grades) gradesTotal+= grade;
         return gradesTotal / this.grades.size();
+    }
+
+    @Override
+    public String toString() {
+        return "Name: " + this.name +"\n" +
+                "Grades Average: " + this.getGradeAverage() + "\n";
     }
 
     public static void main(String[] args) {
